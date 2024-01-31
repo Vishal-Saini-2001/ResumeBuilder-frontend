@@ -1,0 +1,136 @@
+.register {
+    background-color: rgb(146, 81, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.register #content {
+    background-color: rgb(104, 11, 243);
+    width: 80%;
+    height: auto;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    box-shadow: 4px 4px 10px 4px rgb(40, 4, 93);
+}
+
+.register #content #image {
+    width: 40%;
+    display: flex;
+    justify-content: center
+}
+
+.register #content #image img {
+    width: 100%
+}
+
+.register #form {
+    margin-left: 20px;
+    width: 50%;
+    border-left: 4px solid rgb(40, 4, 93);
+    padding-left: 20px;
+}
+
+.register #form h1 {
+    font-size: 40px;
+}
+
+.register #form #name input[type="text"] {
+    width: 45%;
+    padding: 10px 10px;
+    margin: 10px 2px;
+    font-size: larger;
+    border-radius: 3px;
+    border: none;
+}
+
+.register #form .same {
+    width: 91%;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    font-size: larger;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+.register #form .submit {
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(146, 81, 244);
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: larger;
+    transition: all 0.4s ease;
+}
+
+.register #form .submit:hover {
+    background-color: rgb(65, 37, 107);
+    box-shadow: 4px 4px 10px rgb(40, 4, 93);
+}
+
+@media screen and (max-width:750px) {
+    .register #form #name input[type="text"] {
+        padding: 6px 5px;
+        margin: 10px 1px;
+        font-size:small
+    }
+
+    .register #form .same {
+        padding: 6px 5px;
+        margin: 10px 0px;
+        font-size:small
+    }
+
+    .register #form .submit {
+        padding: 10px 15px;
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .register #form {
+        /* margin-left: 20px; */
+        width: 100%;
+        border-left: 4px solid rgb(40, 4, 93);
+        padding-left: 20px;
+        margin-top:20px
+    }
+
+    .register #form h1{
+        font-size: x-large;
+    }
+
+    .register #content #image {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register #form #name input[type="text"] {
+        margin: 5px 1px;
+        font-size:small
+    }
+
+    .register #form .same {
+        margin: 5px 0px;
+    }
+
+    .register #form .submit {
+        padding: 5px 10px;
+    }
+
+    .register #form p{
+        font-size: small;
+    }
+}

@@ -1,0 +1,13 @@
+.accordion{
+    padding: 20px 20px 40px 20px
+}
+
+.accordion label{
+    font-weight:bold
+}
+
+.accordion .background{
+    color:white;
+    font-size: large;
+    background-color: rgb(87, 20, 186);
+}
