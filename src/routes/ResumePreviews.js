@@ -19,7 +19,7 @@ const ResumePreviews = () => {
                 const body = {
                     token
                 }
-                await axios.post("http://localhost:8080/authenticate", body)
+                await axios.post("https://resume-builder-9gto.onrender.com/authenticate", body)
                     .then(resp => { console.log(resp) })
                     .catch(error => {
                         console.log(error);
