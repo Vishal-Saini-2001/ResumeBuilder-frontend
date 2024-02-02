@@ -21,7 +21,7 @@ function Login() {
         const body ={
            token
         }
-        await axios.post("http://localhost:8080/authenticate", body)
+        await axios.post("https://resume-builder-9gto.onrender.com/authenticate", body)
         .then(resp => {
           console.log(resp)
           navigate('/dashboard')
@@ -58,7 +58,7 @@ function Login() {
   const handleSubmit = async (e) => {
     setLoader(true)
     e.preventDefault();
-    await axios.post("http://localhost:8080/login", data)
+    await axios.post("https://resume-builder-9gto.onrender.com/login", data)
       .then(res => res.data)
       .then(res => {
         setLoader(false)
