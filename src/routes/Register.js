@@ -37,7 +37,7 @@ function Register() {
     setLoader(true)
     if (data.fname && data.lname && data.email && data.password) {
       if (data.password === cpass) {
-        await axios.post("http://localhost:8080/register", data)
+        await axios.post("https://resume-builder-9gto.onrender.com/register", data)
           .then(resp => resp.data)
           .then(res => {
             setLoader(false)
