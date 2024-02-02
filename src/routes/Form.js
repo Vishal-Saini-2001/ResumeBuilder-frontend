@@ -19,7 +19,7 @@ function Form() {
         const body = {
           token
         }
-        await axios.post("http://localhost:8080/authenticate", body)
+        await axios.post("https://resume-builder-9gto.onrender.com/authenticate", body)
           .then(resp => { console.log(resp) })
           .catch(error => {
             console.log(error);
@@ -36,7 +36,7 @@ function Form() {
     authenticate()
 
     const getStates = async () => {
-      await axios.get('http://localhost:8080/getStates')
+      await axios.get('https://resume-builder-9gto.onrender.com/getStates')
         .then(resp => setStates(resp.data))
         .catch(error => console.log(error))
     }
