@@ -73,16 +73,16 @@ const ChooseTemplate = () => {
     }
 
     return (
-        <div id='choose_temp' className='bg-dark text-light pt-3' style={{ height: '100vh' }}>
+        <div className='pt-2 pb-4' style={{color:'white', backgroundColor:"rgb(10,20,20)", height:'100vh'}}>
             <center><h1 className='fw-bold'>Choose a <span style={{ color: 'blueviolet' }}>Template</span></h1></center>
-            <div className='d-flex justify-content-evenly align-items-center mt-4' >
-                <div className='d-flex justify-content-center py-3' style={template.template1 ? selectedBoxStyle : myStyle} id='template1' onClick={selectTemplate}>
+            <div className='d-flex justify-content-evenly align-items-center flex-wrap mt-4 mx-2' >
+                <div className='d-flex justify-content-center py-3 my-2' style={template.template1 ? selectedBoxStyle : myStyle} id='template1' onClick={selectTemplate}>
                     <img src={temp1} alt="" style={{ width: '90%' }} />
                 </div>
-                <div className='d-flex justify-content-center py-3' style={template.template3 ? selectedBoxStyle : myStyle} id='template3' onClick={selectTemplate}>
+                <div className='d-flex justify-content-center py-3 my-2' style={template.template3 ? selectedBoxStyle : myStyle} id='template3' onClick={selectTemplate}>
                     <img src={temp2} alt="" style={{ width: '90%' }} />
                 </div>
-                <div className='d-flex justify-content-center py-3' style={template.template2 ? selectedBoxStyle : myStyle} id='template2' onClick={selectTemplate}>
+                <div className='d-flex justify-content-center py-3 my-2' style={template.template2 ? selectedBoxStyle : myStyle} id='template2' onClick={selectTemplate}>
                     <img src={temp3} alt="" style={{ width: '90%' }} />
                 </div>
             </div>

@@ -34,23 +34,20 @@ function Form() {
     }
 
     authenticate()
-  }, [])
 
-  const location = useLocation();
-
-  const template = location.state;
-
-  const [states, setStates] = useState([]);
-
-  useEffect(() => {
     const getStates = async () => {
       await axios.get('http://localhost:8080/getStates')
         .then(resp => setStates(resp.data))
         .catch(error => console.log(error))
     }
-    getStates()
 
+    getStates()
   }, [])
+
+  const location = useLocation();
+  const template = location.state;
+  const [states, setStates] = useState([]);
+
 
   const [personalDetails, setPersonalDetails] = useState({
     fname: "",
@@ -498,13 +495,13 @@ function Form() {
                   {
                     courses.map((v, i) => {
                       return (
-                        <li key={i}>
+                        <li key={i} className='border my-3 p-1'>
                           <div className="courses">
-                            <input type="text" disabled={courseDisabled} placeholder='Company Name' name="company_name" value={v.company_name} onChange={(e) => handleCoursInput(e, i)} className="m-2 w-25 p-2" required />
-                            <input type="text" disabled={courseDisabled} placeholder='Course Domain eg:(Web Development)' value={v.domain_name} onChange={(e) => handleCoursInput(e, i)} name="domain_name" className='m-2 w-25 p-2' required />
-                            <span className='me-3'>Start Date :</span>
+                            <input type="text" disabled={courseDisabled} placeholder='Company Name' name="company_name" value={v.company_name} onChange={(e) => handleCoursInput(e, i)} className="width m-2 p-2" required />
+                            <input type="text" disabled={courseDisabled} placeholder='Course Domain eg:(Web Development)' value={v.domain_name} onChange={(e) => handleCoursInput(e, i)} name="domain_name" className='m-2 p-2 width' required />
+                            <span className='mx-2'>Start Date :</span>
                             <input type="date" disabled={courseDisabled} name="start_date" className='m-2 p-2' value={v.start_date} onChange={(e) => handleCoursInput(e, i)} required />
-                            <span className='me-3'>End Date :</span>
+                            <span className='mx-2'>End Date :</span>
                             <input type="date" disabled={courseDisabled} name="end_date" className='m-2 p-2' value={v.end_date} onChange={(e) => handleCoursInput(e, i)} required />
 
                             <button className='btn background border' onClick={(e) => handleRemoveCourse(e, i)} hidden={courseDisabled}><FontAwesomeIcon icon={faRemove} /></button>
@@ -540,7 +537,7 @@ function Form() {
                     skills.map((v, i) => {
                       return (
                         <li key={i} className='d-inline'>
-                          <input type="text" disabled={skillDisabled} placeholder='HTML' value={v} onChange={(e) => handleSkillChange(e, i)} className='p-2 m-2' required />
+                          <input type="text" disabled={skillDisabled} placeholder='HTML' value={v} onChange={(e) => handleSkillChange(e, i)} className='p-2 my-2 me-1' required />
                           <button className='btn background border' onClick={(e) => handleRemoveSkill(e, i)} hidden={i === 0 ? true : skillDisabled}><FontAwesomeIcon icon={faRemove} /></button>
                         </li>
                       )
@@ -573,19 +570,19 @@ function Form() {
                   {
                     internships.map((v, i) => {
                       return (
-                        <li key={i}>
-                          <div className="courses mt-3">
-                            <input type="text" disabled={internDisabled} placeholder='Company Name' name="company_name" value={v.company_name} onChange={(e) => handleInternshipChange(e, i)} className='me-3 p-2' required />
-                            <input type="text" disabled={internDisabled} placeholder='Course Domain eg:(Web Development)' name="domain_name" value={v.domain_name} onChange={(e) => handleInternshipChange(e, i)} className='me-3 w-25 p-2' required />
-                            <select name="mode" disabled={internDisabled} className='me-3 p-2' value={v.mode} onChange={(e) => handleInternshipChange(e, i)}>
+                        <li key={i} className="my-5 border p-2">
+                          <div className="courses">
+                            <input type="text" disabled={internDisabled} placeholder='Company Name' name="company_name" value={v.company_name} onChange={(e) => handleInternshipChange(e, i)} className='my-1 me-3 p-2' required />
+                            <input type="text" disabled={internDisabled} placeholder='Course Domain eg:(Web Development)' name="domain_name" value={v.domain_name} onChange={(e) => handleInternshipChange(e, i)} className='my-1 me-3 p-2' required />
+                            <select name="mode" disabled={internDisabled} className='me-3 my-1 width p-2' value={v.mode} onChange={(e) => handleInternshipChange(e, i)}>
                               <option value="" selected>Mode</option>
                               <option value="online">Online</option>
                               <option value="offline">Offline</option>
                             </select>
-                            <span className='me-3'>Start Date :</span>
-                            <input type="date" disabled={internDisabled} name="start_date" value={v.start_date} onChange={(e) => handleInternshipChange(e, i)} className='me-3 p-2' required />
-                            <span className='me-3'>End Date :</span>
-                            <input type="date" disabled={internDisabled} name="end_date" value={v.end_date} onChange={(e) => handleInternshipChange(e, i)} className='me-3 p-2' required />
+                            <span className='mx-2 my-1'>Start Date :</span>
+                            <input type="date" disabled={internDisabled} name="start_date" value={v.start_date} onChange={(e) => handleInternshipChange(e, i)} className='me-4 my-1 p-2' required />
+                            <span className='mx-2 my-1'>End Date :</span>
+                            <input type="date" disabled={internDisabled} name="end_date" value={v.end_date} onChange={(e) => handleInternshipChange(e, i)} className='me-2 my-1 p-2' required />
                             <button className='btn background border' onClick={(e) => handleRemoveInternship(e, i)} hidden={internDisabled}><FontAwesomeIcon icon={faRemove} /></button>
                           </div>
                         </li>
@@ -617,8 +614,8 @@ function Form() {
                   {
                     hobbies.map((v, i) => {
                       return (
-                        <li key={i} className='d-inline'>
-                          <input type="text" disabled={hobbieDisabled} value={v} onChange={(e) => handleHobieChange(e, i)} className='m-2 p-2 w-25' placeholder='Singing' required />
+                        <li key={i} className='d-inline my-2'>
+                          <input type="text" disabled={hobbieDisabled} value={v} onChange={(e) => handleHobieChange(e, i)} className='my-2 me-1 p-2 width' placeholder='Singing' required />
                           <button className='btn background border' onClick={(e) => handleRemoveHobbie(e, i)} hidden={i === 0 ? true : hobbieDisabled}  ><FontAwesomeIcon icon={faRemove} /></button>
                         </li>
                       )
@@ -649,15 +646,15 @@ function Form() {
                   {
                     education.map((v, i) => {
                       return (
-                        <li key={i} className='d-inline'>
-                          <div className="courses mt-3">
-                            <input type="text" disabled={educaDisabled} placeholder='College / School' onChange={(e) => handleEducationChange(e, i)} name="college_name" value={v.college_name} className='me-3 p-2' required />
-                            <input type="text" disabled={educaDisabled} placeholder='Stream / Course' onChange={(e) => handleEducationChange(e, i)} name="stream" value={v.stream} className='me-3 w-25 p-2' required />
-                            <input type="text" disabled={educaDisabled} placeholder='Percentage %' onChange={(e) => handleEducationChange(e, i)} name="percent" value={v.percent} className='me-3 p-2' required />
+                        <li key={i} className='my-4 border p-2'>
+                          <div className="courses">
+                            <input type="text" disabled={educaDisabled} placeholder='College / School' onChange={(e) => handleEducationChange(e, i)} name="college_name" value={v.college_name} className='me-3 my-1 p-2' required />
+                            <input type="text" disabled={educaDisabled} placeholder='Stream / Course' onChange={(e) => handleEducationChange(e, i)} name="stream" value={v.stream} className='me-3 my-1 p-2' required />
+                            <input type="text" disabled={educaDisabled} placeholder='Percentage %' onChange={(e) => handleEducationChange(e, i)} name="percent" value={v.percent} className='me-3 my-1 p-2' required />
                             <span className='me-3'>Start Year :</span>
-                            <input type="date" disabled={educaDisabled} name="start_year" onChange={(e) => handleEducationChange(e, i)} value={v.start_year} className='me-3 p-2' required />
+                            <input type="date" disabled={educaDisabled} name="start_year" onChange={(e) => handleEducationChange(e, i)} value={v.start_year} className='me-5 my-1 p-2' required />
                             <span className='me-3'>End Year :</span>
-                            <input type="date" disabled={educaDisabled} name="end_year" onChange={(e) => handleEducationChange(e, i)} value={v.end_year} className='me-3 p-2' required />
+                            <input type="date" disabled={educaDisabled} name="end_year" onChange={(e) => handleEducationChange(e, i)} value={v.end_year} className='me-3 my-1 p-2' required />
                             <button className='btn background border' onClick={(e) => handleRemoveEducation(e, i)} hidden={i === 0 ? true : educaDisabled}><FontAwesomeIcon icon={faRemove} /></button>
                           </div>
                         </li>
@@ -674,8 +671,9 @@ function Form() {
         </div>
 
         {isDisabeled && hobbieDisabled && courseDisabled && internDisabled && skillDisabled && educaDisabled &&
-          <center><button onClick={(e) => handleGenerateResume(e)} className='btn btn-info w-25 fs-4 mt-5'>Generate Resume</button></center>
+          <center><button onClick={(e) => handleGenerateResume(e)} id='submit-form-btn'>Generate Resume</button></center>
         }
+
       </div>
 
 

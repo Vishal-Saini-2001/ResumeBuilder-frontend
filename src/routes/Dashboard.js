@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar'
+import '../css/Dashboard.css'
 import jsPdf from 'jspdf'
+
 
 function Dashboard() {
 
@@ -49,7 +51,7 @@ function Dashboard() {
       unit: 'cm',
       format: 'a4'
     });
-    pdf.addImage(image, 'PNG', 0, 0, 15, 20);
+    pdf.addImage(image, 'PNG', 0, 0, 21, 29.7);
     pdf.save("MyResume.pdf");
   }
 
@@ -58,20 +60,20 @@ function Dashboard() {
   return (
     <div className='dashboard'>
       <Navbar />
-      <div className='mt-4 px-5 py-3 d-flex justify-content-between border-bottom'>
-        <div><h1 style={{fontSize:'40px', fontWeight:'700'}}>Welcome {userName}</h1></div>
+      <div className='mt-4 px-5 py-3 d-flex justify-content-between align-items-center border-bottom'>
+        <div><h1 id='helo-user'>Welcome {userName}</h1></div>
         <div>
-          <button className='btn btn-info px-4 fw-bold'>Create New Resume</button>
+          <button id='create-new-resume' onClick={()=>navigate('/choose_template')}>Create New Resume</button>
         </div>
       </div>
       <center className='mt-4'><h1>Your Recent Resumes</h1></center>
-      <div className='mt-4 d-flex justify-content-evenly align-items-center bg-dark'>
+      <div className='mt-4 d-flex justify-content-evenly bg-dark'>
 
         {
           image &&
-          <div className='p-2 m-4' style={{ width: '9cm', height: '14cm', border: '5px solid blueviolet', borderRadius: '10px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <div className="recent-resumes p-2 m-4">
             <img src={image} alt="" className='w-100' />
-            <button className='btn w-100 mt-3' style={{ backgroundColor: 'blueviolet', color: 'white' }} onClick={generatePdf}>Download</button>
+            <button className='btn w-100 mt-3' id='download' onClick={generatePdf}>Download</button>
           </div>
         }
 

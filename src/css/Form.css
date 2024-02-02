@@ -11,3 +11,29 @@
     font-size: large;
     background-color: rgb(87, 20, 186);
 }
+
+.courses .width{
+    width: 250px;
+}
+
+#submit-form-btn{
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 5px 10px;
+    border:none;
+    border-radius: 5px;
+    margin: 20px 10px;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+#submit-form-btn:hover{
+    box-shadow: 4px 4px 10px blueviolet;
+    background-color: rgb(91, 23, 154);
+}
+
+@media screen and (max-width:400px){
+    .courses .width{
+        width: 190px;
+    }
+}

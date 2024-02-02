@@ -62,7 +62,6 @@ function Login() {
       .then(res => res.data)
       .then(res => {
         setLoader(false)
-        alert(res.msg)
         localStorage.setItem("token", res.token)
         navigate('/dashboard')
       })
