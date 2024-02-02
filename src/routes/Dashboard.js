@@ -25,7 +25,7 @@ function Dashboard() {
         const body = {
           token
         }
-        await axios.post("http://localhost:8080/authenticate", body)
+        await axios.post("https://resume-builder-9gto.onrender.com/authenticate", body)
           .then(resp => { setUserName(resp.data.fname) })
           .catch(error => {
             console.log(error);
