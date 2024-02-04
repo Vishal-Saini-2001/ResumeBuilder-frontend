@@ -66,7 +66,6 @@ const ChooseTemplate = () => {
             [e.currentTarget.id]: true
         })
         setDisable(false);
-        document.getElementById("chooseDiv").scrollBottom = 0;
     }
 
     const handleChooseTemplate = () => {
@@ -74,7 +73,7 @@ const ChooseTemplate = () => {
     }
 
     return (
-        <div id="chooseDiv" className='py-4' style={{color:'white', backgroundColor:"rgb(10,20,20)", height:'max-content'}}>
+        <div className='py-4' style={{color:'white', backgroundColor:"rgb(10,20,20)", height:'max-content'}}>
             <center><h1 className='fw-bold'>Choose a <span style={{ color: 'blueviolet' }}>Template</span></h1></center>
             <div className='d-flex justify-content-evenly align-items-center flex-wrap mt-4 mx-2' >
                 <div className='d-flex justify-content-center py-3 my-2' style={template.template1 ? selectedBoxStyle : myStyle} id='template1' onClick={selectTemplate}>
