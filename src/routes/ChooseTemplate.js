@@ -68,7 +68,7 @@ const ChooseTemplate = () => {
         })
         setDisable(false);
         window.scrollBy({
-            top:100,
+            bottom:0,
             behavior:'smooth'
         });
     }
