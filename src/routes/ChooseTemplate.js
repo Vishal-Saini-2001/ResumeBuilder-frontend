@@ -65,7 +65,11 @@ const ChooseTemplate = () => {
             template3: false,
             [e.currentTarget.id]: true
         })
-        setDisable(false)
+        setDisable(false);
+        window.scrollBy({
+            top:100,
+            behavior:"smooth"
+        });
     }
 
     const handleChooseTemplate = () => {
