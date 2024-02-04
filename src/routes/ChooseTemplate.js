@@ -67,7 +67,10 @@ const ChooseTemplate = () => {
             [e.currentTarget.id]: true
         })
         setDisable(false);
-        myRef.current.scrollBy(0,100);
+        myRef.current.scrollBy({
+            top:100,
+            behavior:'smooth'
+        });
     }
 
     const handleChooseTemplate = () => {
