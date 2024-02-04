@@ -66,7 +66,7 @@ const ChooseTemplate = () => {
             [e.currentTarget.id]: true
         })
         setDisable(false);
-        window.scrollTop += 100;
+        window.scrollBottom = 0;
     }
 
     const handleChooseTemplate = () => {
