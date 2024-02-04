@@ -89,7 +89,7 @@ const ChooseTemplate = () => {
             <center>
                 <button
                     hidden={disable}
-                    className='py-2 px-4 fs-3 text-light fw-bold mt-4'
+                    className='py-2 px-4 fs-3 text-light fw-bold my-4'
                     style={{ backgroundColor: 'blueviolet', border: 'none', borderRadius: '3px' }}
                     onClick={handleChooseTemplate}
                 >
