@@ -78,7 +78,7 @@ const ChooseTemplate = () => {
     }
 
     return (
-        <div ref={myRef} className='pt-2 pb-4' style={{color:'white', backgroundColor:"rgb(10,20,20)", height:'max-content'}}>
+        <div ref={myRef} className='pt-2 pb-4' style={{color:'white', backgroundColor:"rgb(10,20,20)", height:'max-content', overflow:'scroll'}}>
             <center><h1 className='fw-bold'>Choose a <span style={{ color: 'blueviolet' }}>Template</span></h1></center>
             <div className='d-flex justify-content-evenly align-items-center flex-wrap mt-4 mx-2' >
                 <div className='d-flex justify-content-center py-3 my-2' style={template.template1 ? selectedBoxStyle : myStyle} id='template1' onClick={selectTemplate}>
