@@ -68,7 +68,7 @@ const ChooseTemplate = () => {
         })
         setDisable(false);
         myRef.current.scrollBy({
-            bottom:0,
+            top:100,
             behavior:'smooth'
         });
     }
