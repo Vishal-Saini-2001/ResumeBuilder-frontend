@@ -67,7 +67,7 @@ const ChooseTemplate = () => {
             [e.currentTarget.id]: true
         })
         setDisable(false);
-        myRef.current.scrollTop = myRef.current.scrollHeight;
+        myRef.current.scrollTop += 100;
     }
 
     const handleChooseTemplate = () => {
