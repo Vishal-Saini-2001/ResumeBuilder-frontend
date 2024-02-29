@@ -71,11 +71,11 @@ function Register() {
         <>
          
          <div className="register">
-          <div id="content">
-            <div id="image">
+          <div id="content" data-aos="fade-down">
+            <div id="image" data-aos="fade-right">
               <img src={registeration} alt="" />
             </div>
-            <div id="form">
+            <div id="form" data-aos="fade-left">
               <h1>SignUP</h1>
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div id="name">

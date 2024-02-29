@@ -78,12 +78,12 @@ function Login() {
     else{
       return (
         <div className="login">
-          <div id="content">
-            <div id="image">
+          <div id="content" data-aos="zoom-in">
+            <div id="image" data-aos="fade-down">
               <img src={login} alt="" />
             </div>
-            <div id="form">
-              <h1>Login</h1>
+            <div id="form" data-aos="fade-up">
+              <h1 data-aos="fade-left">Login</h1>
               <form onSubmit={(e) => handleSubmit(e)}>
                 <input type="email" name="email" onChange={(e) => handleChange(e)} className="same" placeholder='Email' required /> <br />
                 <input type="password" name="password" onChange={(e) => handleChange(e)} className="same" placeholder='Password' required /> <br />
