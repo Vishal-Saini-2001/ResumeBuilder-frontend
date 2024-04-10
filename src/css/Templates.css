@@ -1,0 +1,11 @@
+#main-div{
+    color:white;
+    background-color:rgb(10,20,20); 
+    height:100vh
+}
+
+@media screen and (max-width:1200px) {
+    #main-div{
+        height: 100%;
+    }
+}
