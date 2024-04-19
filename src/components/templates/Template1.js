@@ -81,10 +81,10 @@ function Template1(props,ref) {
 
                     <div className="left" id='social'>
                         <h2>SOCIAL HANDLES</h2>
-                        <div hidden={social.github ? false : true}><FontAwesomeIcon icon={faGithub}/> <a className='text-dark' href={social.github}>Github</a></div>
-                        <div hidden={social.linkedin ? false : true}><FontAwesomeIcon icon={faLinkedin}/> <a className='text-dark' href={social.linkedin}>Linkedin</a></div>
-                        <div hidden={social.insta ? false : true}><FontAwesomeIcon icon={faInstagram}/> <a className='text-dark' href={social.insta}>Instagram</a></div>
-                        <div hidden={social.twitter ? false : true}><FontAwesomeIcon icon={faTwitter}/> <a className='text-dark' href={social.twitter}>Twitter</a></div>
+                        <div hidden={social.github ? false : true}><FontAwesomeIcon icon={faGithub}/> <a className='text-dark' href={social.github} target='_blank'>{social.github}</a></div>
+                        <div hidden={social.linkedin ? false : true}><FontAwesomeIcon icon={faLinkedin}/> <a className='text-dark' href={social.linkedin} target='_blank'>{social.linkedin}</a></div>
+                        <div hidden={social.insta ? false : true}><FontAwesomeIcon icon={faInstagram}/> <a className='text-dark' href={social.insta} target='_blank'>{social.insta}</a></div>
+                        <div hidden={social.twitter ? false : true}><FontAwesomeIcon icon={faTwitter}/> <a className='text-dark' href={social.twitter} target='_blank'>{social.twitter}</a></div>
                     </div>
 
                 </div>

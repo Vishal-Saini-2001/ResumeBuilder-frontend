@@ -82,10 +82,10 @@ const Template2 = forwardRef((props, ref) => {
 
           <div className="left" id='social'>
             <h2>SOCIAL HANDLES</h2>
-            <div hidden={social.github ? false : true}><FontAwesomeIcon icon={faGithub}/> <a className='text-dark' href={social.github}>Github</a></div>
-            <div hidden={social.linkedin ? false : true}><FontAwesomeIcon icon={faLinkedin}/> <a className='text-dark'  href={social.linkedin}>Linkedin</a></div>
-            <div hidden={social.insta ? false : true}><FontAwesomeIcon icon={faInstagram}/> <a className='text-dark'  href={social.insta}>Instagram</a></div>
-            <div hidden={social.twitter ? false : true}><FontAwesomeIcon icon={faTwitter}/> <a className='text-dark'  href={social.twitter}>Twitter</a></div>
+            <div hidden={social.github ? false : true}><FontAwesomeIcon icon={faGithub}/> <a className='text-dark' href={social.github}>{social.github}</a></div>
+            <div hidden={social.linkedin ? false : true}><FontAwesomeIcon icon={faLinkedin}/> <a className='text-dark'  href={social.linkedin}>{social.linkedin}</a></div>
+            <div hidden={social.insta ? false : true}><FontAwesomeIcon icon={faInstagram}/> <a className='text-dark'  href={social.insta}>{social.insta}</a></div>
+            <div hidden={social.twitter ? false : true}><FontAwesomeIcon icon={faTwitter}/> <a className='text-dark'  href={social.twitter}>{social.twitter}</a></div>
           </div>
 
         </div>
