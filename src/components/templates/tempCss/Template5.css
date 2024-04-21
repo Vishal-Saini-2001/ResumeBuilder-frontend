@@ -1,0 +1,65 @@
+.template5 {
+    width: 21cm;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-top: 5px solid #FF9900;
+}
+
+.template5 header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.template5 header h1 {
+    color: #FF9900;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.template5 header p {
+    color: #666;
+    font-size: 18px;
+}
+
+.template5 .section {
+    margin-bottom: 30px;
+}
+
+.template5 .section h2 {
+    border-bottom: 2px solid #FF9900;
+    padding-bottom: 5px;
+    color: #FF9900;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.template5 .info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.template5
+.education h3,
+.experience h3,
+.hobbies h3,
+.skills h3,
+.courses h3,
+.social h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.template5
+.education p,
+.experience p,
+.courses p,
+.social p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}

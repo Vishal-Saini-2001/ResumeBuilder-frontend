@@ -1,7 +1,8 @@
 #main-div{
     color:white;
     background-color:rgb(10,20,20); 
-    height:100vh
+    height:100%;
+    padding-bottom: 50px;
 }
 
 @media screen and (max-width:1200px) {

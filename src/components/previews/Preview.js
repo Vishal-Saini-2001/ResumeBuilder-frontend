@@ -52,7 +52,7 @@ function Preview(props) {
     
 
       <div id="bg">
-        <center><h1 className='fw-bold m-4 text-dark'>Your Resume is Ready to Print :-)</h1></center>
+        <center><h1 className='fw-bold m-4 text-light'>Your Resume is Ready to Print :-)</h1></center>
         <button onClick={handlePrint} class='preview_print'><FontAwesomeIcon icon={faPrint} /> Print Resume</button>
         <div className="previewContainer">
           <div className="scroll-resume">

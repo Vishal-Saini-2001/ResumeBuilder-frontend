@@ -19,8 +19,7 @@
 }
 
 .dashboard .recent-resumes{
-    width:9cm; 
-    height: 14cm; 
+    width:12cm; 
     border: 5px solid blueviolet; 
     border-radius: 10px; 
     display: flex; 
